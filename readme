@@ -1,1 +1,68 @@
+* PROBLEM STATEMENT
+The main objective of the project was to develop a model to predict the yellow taxi fare amount in New York City. 
+I considered a range of factors within the dataset as well as weather related factors. 
+I utilized PySpark, Spark SQL, Google BigQuery and Python for the process of analyzing the data and building predictive models.
 
+* DATA DESCRIPTION
+I obtained the data from two different sources. My first source was the nyc.gov website for the yellow taxi trip data and taxi zones data. 
+To enable efficient processing of the dataset, I made the decision to utilize January and February trip data. 
+The other source was Google BigQuery’s open dataset. I obtained the weather and weather station data from BigQuery.
+I utilized queries written in Spark SQL to combine the data from these tables resulting in a dataset with over 500k rows and 43 columns.
+
+* PREDICTION AND INFERENCE GOAL
+Conduct exploratory data analysis in order to identify factors that influence the total fare amount of a yellow taxi in New York City and provide actionable insights to stakeholders 
+to enable better resource optimization.
+Utilize Apache Spark’s MLLib library in order to build predictive models using linear regression, 
+decision trees and random forest with fare amount as the dependent variable.
+
+* RESULTS 
+
+* In Queens, Bronx, Manhattan, Brooklyn, and Staten Island, the fare distributions show distinct peaks suggesting common 
+fare ranges within each borough. Manhattan has the highest frequency 
+of fares in the middle range, which might indicate a combination of trip lengths and traffic conditions unique to Manhattan.
+
+* Fares in the outer boroughs like Queens and Staten Island show wider distributions, 
+suggesting more variability in trip distances and possibly less consistency in pricing or travel patterns compared to Manhattan.
+
+* The overall fare amount distribution across NYC indicates a strong peak at the lower end, 
+which suggests that short to medium-range trips are most common.
+
+* The steep drop-off past the initial peak implies that high-cost rides are relatively rare, 
+which could be due to long-distance trips being less frequent or alternative transportation options for such distances.
+
+* The scatter plot does not show a clear correlation between the number of passengers and 
+the fare amount, implying that the number of passengers may not significantly impact the fare, 
+considering that fares are often flat rates irrespective of passenger count, up to the vehicle's capacity.
+
+* Single-passenger rides dominate the distribution, indicating that most taxi trips are taken solo. 
+There's a sharp decline in frequency as the number of passengers increases, suggesting that group rides are less common.
+
+* Trip distance distribution shows that short trips are more common than longer ones, with a steep decrease as distance increases.
+
+* The density of pickups and dropoffs in specific areas highlight the hotspots for taxi activities. 
+Central and Downtown Manhattan have the highest concentration of taxi activity, while airports also show significant activity levels.
+
+* Drop-off heatmaps show that some areas are more popular as destinations than as pickup locations, 
+which could be indicative of commuting patterns or popular venues/attractions.
+
+* There's a notable trend in trip counts varying by day of the week, with a significant drop on Sundays, 
+which may reflect lower demand for taxis on the traditional "rest day" or non-workday for many people.
+
+* Week-of-month trip distribution displays a dip towards the end of the month. 
+This might be due to monthly financial cycles affecting transportation spending.
+
+* Histograms for fares to and from JFK, LaGuardia, and Newark airports 
+show peaks at certain fare amounts, which could indicate standard airport rates or 
+common distances from key areas in the city to these airports.
+
+* Scatter plots examining fare against weather conditions suggest a weak correlation 
+between precipitation or temperature and the average fare, though ride frequency seems to 
+decrease slightly on days with higher precipitation, which might be due to people preferring not to travel in adverse weather conditions.
+
+* Temperature appears to have a more complex relationship with the number of rides, 
+where both very low and high temperatures might be associated with increased taxi usage, 
+possibly due to discomfort from walking in such conditions.
+
+* The average fare seems to fluctuate slightly over the weeks, but there isn't a clear upward or downward trend, 
+indicating that fare prices are relatively stable over time. However, 
+there's a slight increase in average fares during mid-weekdays, which could be related to higher business activity.
